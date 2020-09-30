@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActivityTracker", "ActivityTracker\ActivityTracker.csproj", "{AC210E17-3C6E-46C0-8980-C0769673FA0D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQExamples", "LINQWexamples\LINQWexamples\LINQExamples\LINQExamples.csproj", "{0A15764B-D1A3-416E-913B-0F1E63F4A314}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rad3012020Week1Lab1", "Rad3012020Week1Lab1\Rad3012020Week1Lab1.csproj", "{A2EF3B9B-C74B-40D3-8519-F40C006DC521}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{AC210E17-3C6E-46C0-8980-C0769673FA0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC210E17-3C6E-46C0-8980-C0769673FA0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC210E17-3C6E-46C0-8980-C0769673FA0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A15764B-D1A3-416E-913B-0F1E63F4A314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A15764B-D1A3-416E-913B-0F1E63F4A314}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A15764B-D1A3-416E-913B-0F1E63F4A314}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A15764B-D1A3-416E-913B-0F1E63F4A314}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2EF3B9B-C74B-40D3-8519-F40C006DC521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2EF3B9B-C74B-40D3-8519-F40C006DC521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2EF3B9B-C74B-40D3-8519-F40C006DC521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2EF3B9B-C74B-40D3-8519-F40C006DC521}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
