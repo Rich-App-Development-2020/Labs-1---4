@@ -95,7 +95,7 @@ namespace Rad3012020Week1Lab1
             {
                 var id = item.SupplierID;
                 var name = item.SupplierName;
-                var parts = (from s in model.supplierProducts
+                var parts =  (from s in model.supplierProducts
                              join p in model.products on s.ProductID equals p.ProductID
                              where s.SupplierID == id
                              select p.description);
