@@ -73,4 +73,5 @@ namespace Rad3012020Week1Lab1
         public string AddressLine2 { get; set; }
 
     }
+ 
 }

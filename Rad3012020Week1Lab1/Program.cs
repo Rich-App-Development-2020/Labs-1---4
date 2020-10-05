@@ -1,6 +1,15 @@
-﻿using ActivityTracker;
+﻿/* #############################
+ * 
+ * Author: Johnathon Mc Grory
+ * Date : 4/10/2020
+ * Description : C# Code for Week One Lab One 2020 Third year Semester One 
+ * 
+ * ############################# */
+
+using ActivityTracker;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,11 +20,15 @@ namespace Rad3012020Week1Lab1
     {
         static void Main(string[] args)
         {
+            //changes the currency cymbol from £ to "EUR";
+            CultureInfo info = new CultureInfo(System.Threading.Thread.CurrentThread.CurrentCulture.LCID);
+            info.NumberFormat.CurrencySymbol = "EUR ";
+            System.Threading.Thread.CurrentThread.CurrentCulture = info;
+
+            //Track activities
             Activity.Track("Designing Classes Model");
             Activity.Track("Starting Queries");
             Console.WriteLine();
-
-            //finish listing the objects
 
             ProductModel model = new ProductModel();
 
@@ -59,8 +72,9 @@ namespace Rad3012020Week1Lab1
             foreach (var item in model.products)
             {
                 float totalValue = item.QuantityInStock * item.UnitPrice;
-                Console.WriteLine(item.description + "\t\t {0:C}", totalValue);
+                Console.WriteLine(item.description + "\t\t{0:C}", totalValue);
             }
+
             Console.WriteLine("------------");
             Console.WriteLine();
 
@@ -72,14 +86,25 @@ namespace Rad3012020Week1Lab1
                 Console.WriteLine(item.description);
             }
 
+
             //List all the suppliers, their Parts and order it by supplier name
-            //var suppliers = model.suppliers;
 
-            //var idk = (from s in model.supplierProducts
-            //           join p in model.products on s.ProductID equals p.ProductID
-            //           where p.ProductID == s.ProductID
-            //           select( s.)
+            //IMPORTANT: Struggled with this question and currently awaiting solution to see how it is done
+            var suppliers = model.suppliers;
+            foreach (var item in suppliers)
+            {
+                var id = item.SupplierID;
+                var name = item.SupplierName;
+                var parts = (from s in model.supplierProducts
+                             join p in model.products on s.ProductID equals p.ProductID
+                             where s.SupplierID == id
+                             select p.description);
 
+                Console.WriteLine(name + parts);
+            };
+
+            //Finished queries
+            Activity.Track("Starting Queries");
         }
     }
 }
