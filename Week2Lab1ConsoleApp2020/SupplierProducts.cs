@@ -12,7 +12,7 @@ namespace Week2Lab1ConsoleApp2020
     {
         [Key, Column(Order = 0)]
         [ForeignKey("FK_Supplier")]
-        public int SupplierId { get; set; }
+        public int SupplierID { get; set; }
         [Key, Column(Order = 1)]
         [ForeignKey("FK_Product")]
         public int ProductID { get; set; }

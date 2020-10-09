@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +19,6 @@ namespace Week2Lab1ConsoleApp2020
         public int QuantityInStock { get; set; }
         [ForeignKey("category")]
         public int CategoryID { get; set; }
-        public virtual Category Category { get; set; }
+        public virtual Category category { get; set; }
     }
 }

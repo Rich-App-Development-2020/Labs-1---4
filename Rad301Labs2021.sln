@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQExamples", "LINQWexampl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rad3012020Week1Lab1", "Rad3012020Week1Lab1\Rad3012020Week1Lab1.csproj", "{A2EF3B9B-C74B-40D3-8519-F40C006DC521}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week2Lab1ConsoleApp2020", "Week2Lab1ConsoleApp2020\Week2Lab1ConsoleApp2020.csproj", "{C9B94B4E-FB6F-4310-9319-8842D98806BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week2Lab1ConsoleApp2020", "Week2Lab1ConsoleApp2020\Week2Lab1ConsoleApp2020.csproj", "{3B58A7EF-1FB8-41A4-9187-BCAD66A6F598}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{A2EF3B9B-C74B-40D3-8519-F40C006DC521}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2EF3B9B-C74B-40D3-8519-F40C006DC521}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2EF3B9B-C74B-40D3-8519-F40C006DC521}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C9B94B4E-FB6F-4310-9319-8842D98806BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C9B94B4E-FB6F-4310-9319-8842D98806BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C9B94B4E-FB6F-4310-9319-8842D98806BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C9B94B4E-FB6F-4310-9319-8842D98806BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B58A7EF-1FB8-41A4-9187-BCAD66A6F598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B58A7EF-1FB8-41A4-9187-BCAD66A6F598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B58A7EF-1FB8-41A4-9187-BCAD66A6F598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B58A7EF-1FB8-41A4-9187-BCAD66A6F598}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

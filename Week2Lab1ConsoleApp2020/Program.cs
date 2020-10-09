@@ -13,6 +13,7 @@ namespace Week2Lab1ConsoleApp2020
         {
             Activity.Track("Creating Console App");
             Console.ReadKey();
+            Activity.Track("Data Seeded");
         }
     }
 }
