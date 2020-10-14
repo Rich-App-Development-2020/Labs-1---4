@@ -199,6 +199,10 @@
     <Compile Include="Migrations\202010140908409_INITIAL MIGRATION USER DATABASE SETUP.designer.cs">
       <DependentUpon>202010140908409_INITIAL MIGRATION USER DATABASE SETUP.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010140913470_APPLICATION USER FIELDS ADDED.cs" />
+    <Compile Include="Migrations\202010140913470_APPLICATION USER FIELDS ADDED.designer.cs">
+      <DependentUpon>202010140913470_APPLICATION USER FIELDS ADDED.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -292,6 +296,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202010140908409_INITIAL MIGRATION USER DATABASE SETUP.resx">
       <DependentUpon>202010140908409_INITIAL MIGRATION USER DATABASE SETUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010140913470_APPLICATION USER FIELDS ADDED.resx">
+      <DependentUpon>202010140913470_APPLICATION USER FIELDS ADDED.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
