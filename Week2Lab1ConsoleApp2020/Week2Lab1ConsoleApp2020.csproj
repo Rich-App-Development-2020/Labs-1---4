@@ -160,18 +160,6 @@
     <Compile Include="Migrations\202010091919587_FOURTH.designer.cs">
       <DependentUpon>202010091919587_FOURTH.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202010091920455_FIFTH.cs" />
-    <Compile Include="Migrations\202010091920455_FIFTH.designer.cs">
-      <DependentUpon>202010091920455_FIFTH.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010091923275_SIXTH.cs" />
-    <Compile Include="Migrations\202010091923275_SIXTH.designer.cs">
-      <DependentUpon>202010091923275_SIXTH.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010091927056_SEVENTH.cs" />
-    <Compile Include="Migrations\202010091927056_SEVENTH.designer.cs">
-      <DependentUpon>202010091927056_SEVENTH.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
@@ -204,15 +192,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010091919587_FOURTH.resx">
       <DependentUpon>202010091919587_FOURTH.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010091920455_FIFTH.resx">
-      <DependentUpon>202010091920455_FIFTH.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010091923275_SIXTH.resx">
-      <DependentUpon>202010091923275_SIXTH.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010091927056_SEVENTH.resx">
-      <DependentUpon>202010091927056_SEVENTH.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
