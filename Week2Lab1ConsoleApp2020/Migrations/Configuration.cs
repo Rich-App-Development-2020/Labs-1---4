@@ -57,22 +57,22 @@
             context.SaveChanges();
             #endregion addingSupplierProducts
 
-            #region addingNewProduct
-            context.Products.AddOrUpdate(new Product[]
-                {
-                    new Product { ID = 5, Description = " Wooden planks", DateFirstissued = DateTime.Today, UnitPrice = 19.50f, QuantityInStock = 30, CategoryID = 1},
+            //#region addingNewProduct
+            //context.Products.AddOrUpdate(new Product[]
+            //    {
+            //        new Product { ID = 5, Description = " Wooden planks", DateFirstissued = DateTime.Today, UnitPrice = 19.50f, QuantityInStock = 30, CategoryID = 1},
 
-                });
-            context.SaveChanges();
-            #endregion addingNewProduct
+            //    });
+            //context.SaveChanges();
+            //#endregion addingNewProduct
 
-            #region addingNewSupplier
-            context.Suppliers.AddOrUpdate(new Supplier[]
-               {
-                    new Supplier { SupplierID = 3, SupplierName = " Alisha Daniels", SupplierAddressLine1 = "Simon's Street", SupplierAddressLine2 = "London" },
-               });
-            context.SaveChanges();
-            #endregion addingNewSupplier
+            //#region addingNewSupplier
+            //context.Suppliers.AddOrUpdate(new Supplier[]
+            //   {
+            //        new Supplier { SupplierID = 3, SupplierName = " Alisha Daniels", SupplierAddressLine1 = "Simon's Street", SupplierAddressLine2 = "London" },
+            //   });
+            //context.SaveChanges();
+            //#endregion addingNewSupplier
 
 
         }
