@@ -51,12 +51,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Week32021ClubDomain\Classes\ClubModels\Club.cs" />
+    <Compile Include="Week32021ClubDomain\Classes\ClubModels\ClubEvent.cs" />
+    <Compile Include="Week32021ClubDomain\Classes\ClubModels\EventAttendance.cs" />
+    <Compile Include="Week32021ClubDomain\Classes\ClubModels\Member.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
