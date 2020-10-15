@@ -1,4 +1,12 @@
-﻿using ActivityTracker;
+﻿/* #############################
+ * 
+ * Author: Johnathon Mc Grory
+ * Date : 15/10/2020
+ * Description : Rich App Development lab 3 code
+ * 
+ * ############################# */
+
+using ActivityTracker;
 using Microsoft.Owin;
 using Owin;
 
