@@ -291,7 +291,7 @@
       <Name>ActivityTracker</Name>
     </ProjectReference>
     <ProjectReference Include="..\Week32021ClubDomain.Classes\Week32021ClubDomain.Classes.csproj">
-      <Project>{c43c8958-cedb-4b95-81c1-9114ee19014a}</Project>
+      <Project>{C43C8958-CEDB-4B95-81C1-9114EE19014A}</Project>
       <Name>Week32021ClubDomain.Classes</Name>
     </ProjectReference>
   </ItemGroup>

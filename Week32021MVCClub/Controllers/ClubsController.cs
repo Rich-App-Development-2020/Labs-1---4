@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClubDomain.Classes.ClubModels;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -8,7 +9,6 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using ClubDomain.Classes.ClubModels;
 using Week32021ClubDomain.Classes;
 
 namespace Week32021MVCClub.Controllers
