@@ -17,10 +17,8 @@ namespace Week32021MVCClub
     {
         public void Configuration(IAppBuilder app)
         {
-            ConfigureAuth(app);
             Activity.Track("Starting up MVC app");
-            Activity.Track(" Logging in as Authenticated user");
-
+            ConfigureAuth(app);
         }
     }
 }

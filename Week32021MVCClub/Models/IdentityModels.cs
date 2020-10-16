@@ -1,5 +1,4 @@
-﻿using System;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -17,9 +16,6 @@ namespace Week32021MVCClub.Models
             // Add custom user claims here
             return userIdentity;
         }
-        public DateTime JoinDate { get; set; }
-        public string FirstName { get; set; }
-        public string Surname { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

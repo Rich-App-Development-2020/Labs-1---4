@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Category.cs" />
+    <Compile Include="ClubsContext.cs" />
     <Compile Include="DbBusinessContext.cs" />
     <Compile Include="Migrations\202010091913199_Initial.cs" />
     <Compile Include="Migrations\202010091913199_Initial.designer.cs">

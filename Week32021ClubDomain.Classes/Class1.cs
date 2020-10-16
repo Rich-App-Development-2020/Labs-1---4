@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Week32021ClubDomain.Classes.Migrations
+namespace Week32021ClubDomain.Classes
 {
-    class Configuration
+    public class Class1
     {
     }
 }
