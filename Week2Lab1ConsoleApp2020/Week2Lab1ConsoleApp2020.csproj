@@ -180,6 +180,10 @@
       <Project>{ac210e17-3c6e-46c0-8980-c0769673fa0d}</Project>
       <Name>ActivityTracker</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RAD3012021Week4.ClubDomain.Classes\RAD3012021Week4.ClubDomain.Classes.csproj">
+      <Project>{f022a3b1-beb9-4877-b5e5-4ab0b0d1d095}</Project>
+      <Name>RAD3012021Week4.ClubDomain.Classes</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202010091913199_Initial.resx">
