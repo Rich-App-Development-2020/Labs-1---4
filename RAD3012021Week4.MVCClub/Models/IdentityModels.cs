@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -16,12 +17,16 @@ namespace RAD3012021Week4.MVCClub.Models
             // Add custom user claims here
             return userIdentity;
         }
+        public DateTime date_joined{ get; set; }
+        public string StudentID { get; set; }
+        public string FirstName { get; set; }
+        public string Surname { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("ClubConnection", throwIfV1Schema: false)
         {
         }
 
