@@ -9,10 +9,20 @@
         <li>
             @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
         </li>
+
+        @*if the user is in an admin role present them with a link that allows them to see all the clubs*@
+
+        @if (User.Identity.IsAuthenticated && User.IsInRole("ClubAdmin"))
+        {
+            <li>@Html.ActionLink("Maintain Club", "Index", "Club",
+               routeValues: User.Identity.GetUserId(),
+               htmlAttributes: new { id = "maintainClub" })</li>
+        }
         <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
     </ul>
     }
 }
+//if the user does not have an autheticated role, redirect them back to the login page  
 else
 {
     <ul class="nav navbar-nav navbar-right">

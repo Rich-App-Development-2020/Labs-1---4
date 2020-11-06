@@ -62,7 +62,7 @@
                     SecurityStamp = Guid.NewGuid().ToString(),
                     FirstName = "Paul",
                     Surname = "Powell",
-                    PasswordHash = ps.HashPassword("``")
+                    PasswordHash = ps.HashPassword("Rad3022021$1")
                 });
 
             context.Users.AddOrUpdate(u => u.UserName,

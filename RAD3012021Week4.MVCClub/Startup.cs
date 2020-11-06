@@ -10,7 +10,8 @@ namespace RAD3012021Week4.MVCClub
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
-            Activity.Track("Starting Week 4 Lab 1");
+            //Activity.Track("Starting Week 4 Lab 1");
+            Activity.Track("Testing Club Controller");
         }
     }
 }

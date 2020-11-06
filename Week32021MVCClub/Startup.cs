@@ -19,6 +19,7 @@ namespace Week32021MVCClub
         {
             Activity.Track("Starting up MVC app");
             ConfigureAuth(app);
+            Activity.Track("Contexts created and seeded");
         }
     }
 }
