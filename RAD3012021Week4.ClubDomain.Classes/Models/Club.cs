@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RAD3012021Week4.ClubDomain.Classes.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;

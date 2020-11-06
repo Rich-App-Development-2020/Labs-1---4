@@ -51,7 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="ClubsContext.cs" />
     <Compile Include="Migrations\202011061351226_Club Context Setup.cs" />
     <Compile Include="Migrations\202011061351226_Club Context Setup.designer.cs">
@@ -60,8 +59,10 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Club.cs" />
     <Compile Include="Models\ClubEvent.cs" />
+    <Compile Include="Models\Course.cs" />
     <Compile Include="Models\EventAttendance.cs" />
-    <Compile Include="Models\Members.cs" />
+    <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
