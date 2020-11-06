@@ -131,6 +131,25 @@
                }, // End of First club added other clubs can be added next
             } // End of Clubs array
             );// End of Add or Update
+
+            SeedEventAttendance(context);
+        }
+
+        private void SeedEventAttendance(Week32021ClubDomain.Classes.ClubsContext context)
+        {
+            List<Club> clubs = context.Clubs.ToList();
+            //You can't iterate over a conext collection and chnage the context at the same time
+            //Hence we need to take a copy of the culbs collection as a list#
+            foreach (Club club in clubs)
+                foreach (ClubEvent ev in club.clubEvents)
+                    foreach (Member m in club.clubMembers)
+                        context.EventAttendances.AddOrUpdate(a => new { a.EventID, a.AttendeeMember },
+                            new EventAttendance
+                            {
+                                EventID = ev.EventID,
+                                AttendeeMember = m.MemberID,
+                            });
+            context.SaveChanges();
         }
     }
 }

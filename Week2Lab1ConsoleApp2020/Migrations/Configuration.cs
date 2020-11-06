@@ -28,8 +28,8 @@
             Random r = new Random();
             context.Products.AddOrUpdate(new Product[]
                 {
-                    new Product { ID = 1, Description = " 9 inch nails", DateFirstissued = baseDate.AddDays(r.Next(5,15)), UnitPrice = 0.10f, QuantityInStock = 200, CategoryID = 1},
-                    new Product { ID = 2, Description = " 9 inch bolts", DateFirstissued = baseDate.AddDays(r.Next(5,15)), UnitPrice = 0.20f, QuantityInStock = 120, CategoryID = 1},
+                    new Product { ID = 1, Description = "9 inch nails", DateFirstissued = baseDate.AddDays(r.Next(5,15)), UnitPrice = 0.10f, QuantityInStock = 200, CategoryID = 1},
+                    new Product { ID = 2, Description = "9 inch bolts", DateFirstissued = baseDate.AddDays(r.Next(5,15)), UnitPrice = 0.20f, QuantityInStock = 120, CategoryID = 1},
                     new Product { ID = 3, Description = "Chimney Hoover", DateFirstissued = baseDate.AddDays(r.Next(5,15)), UnitPrice = 100.5f, QuantityInStock = 10, CategoryID = 2},
                     new Product { ID = 4, Description = "Washing Machine", DateFirstissued = baseDate.AddDays(r.Next(5,15)), UnitPrice = 399.99f, QuantityInStock = 7, CategoryID = 2},
 
@@ -60,7 +60,7 @@
             //#region addingNewProduct
             //context.Products.AddOrUpdate(new Product[]
             //    {
-            //        new Product { ID = 5, Description = " Wooden planks", DateFirstissued = DateTime.Today, UnitPrice = 19.50f, QuantityInStock = 30, CategoryID = 1},
+            //        new Product { ID = 5, Description = "Wooden planks", DateFirstissued = DateTime.Today, UnitPrice = 19.50f, QuantityInStock = 30, CategoryID = 1},
 
             //    });
             //context.SaveChanges();

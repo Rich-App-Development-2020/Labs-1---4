@@ -4,7 +4,7 @@
  * Date : 4/10/2020
  * Description : C# Code for Week One Lab One 2020 Third year Semester One 
  * 
- * ############################# */
+ * ############################# `*/
 
 using ActivityTracker;
 using System;
@@ -90,21 +90,23 @@ namespace Rad3012020Week1Lab1
             //List all the suppliers, their Parts and order it by supplier name
 
             //IMPORTANT: Struggled with this question and currently awaiting solution to see how it is done
-            var suppliers = model.suppliers;
-            foreach (var item in suppliers)
+            var suppliersAndParts = (from Suppliers in model.suppliers
+                                     join SupplierProducts in model.supplierProducts
+                                     on Suppliers.SupplierID equals SupplierProducts.SupplierID
+                                     join Products in model.products
+                                     on SupplierProducts.ProductID equals Products.ProductID
+                                     orderby Suppliers.SupplierName
+                                     select new
+                                     {
+                                         Suppliers.SupplierName,
+                                         Products.description,
+                                     }); ;
+
+            Console.WriteLine("Query 6 List all the suppliers and their Parts ordered by supplier name");
+            foreach (var item in suppliersAndParts)
             {
-                var id = item.SupplierID;
-                var name = item.SupplierName;
-                var parts =  (from s in model.supplierProducts
-                             join p in model.products on s.ProductID equals p.ProductID
-                             where s.SupplierID == id
-                             select p.description);
-
-                Console.WriteLine(name + parts);
-            };
-
-            //Finished queries
-            Activity.Track("Starting Queries");
+                Console.WriteLine(item);
+            }
         }
     }
 }

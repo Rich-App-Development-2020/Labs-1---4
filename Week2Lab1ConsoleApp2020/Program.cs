@@ -9,6 +9,7 @@
 using ActivityTracker;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -25,36 +26,47 @@ namespace Week2Lab1ConsoleApp2020
             Activity.Track("Creating Console App");
             Console.ReadKey();
             Activity.Track("Data Seeded");
+            Console.WriteLine();
+            Activity.Track("Data Seeded");
+            Console.WriteLine();
             list_categories();
+            Console.WriteLine();
             list_products();
+            Console.WriteLine();
             list_products_specified_quantity(UpperLimit);
+            Console.WriteLine();
             list_product_value();
+            Console.WriteLine();
             list_category_products(category);
+            Console.WriteLine();
             list_supplier_parts();
-            //AddProduct();
+           // AddProduct();
             Activity.Track("Lab Finished");
 
         }
 
-        //private static void AddProduct()
-        //{
-        //    using(DbBusinessContext db = new DbBusinessContext())
-        //    {
-        //        db.SupplierProducts.Add(new SupplierProduct
-        //        {
-        //            DateFirstSupplied = DateTime.Now,
-        //            FK_Product = new Product
-        //            {
-        //                category = db.Categories.Find(1),
-        //                DateFirstissued = DateTime.Now,
-        //                Description = "New Product",
-        //                QuantityInStock = 22,
-        //                UnitPrice = 0.40f
-        //            },
-        //            FK_Supplier = new Supplier { SupplierName = "New Suppler", SupplierAddressLine1 = "New Supplier Addr1", SupplierAddressLine2 = "Addr2" }
-        //        });
-        //    }
-        //}
+        private static void AddProduct()
+        {
+            using (DbBusinessContext db = new DbBusinessContext())
+            {
+                db.SupplierProducts.Add(new SupplierProduct
+                {
+                    DateFirstSupplied = DateTime.Now,
+                    FK_Product = new Product
+                    {
+                        category = db.Categories.Find(1),
+                        DateFirstissued = DateTime.Now,
+                        Description = "Wooden Planks",
+                        QuantityInStock = 55,
+                        UnitPrice = 20.40f
+                    },
+                    FK_Supplier = new Supplier { SupplierName = "Alison Hargreeves", SupplierAddressLine1 = "The Nook", SupplierAddressLine2 = "Crow's Lane" }
+                });
+                db.SaveChanges();
+                Console.WriteLine("IT WORKED");
+
+            }
+        }
 
         private static void list_supplier_parts()
         {
@@ -79,6 +91,7 @@ namespace Week2Lab1ConsoleApp2020
                     string result = ModifiedList(item);
                     Console.WriteLine(result);
                 }
+                Console.WriteLine();
             }
         }
         public static string ModifiedList(object item)
@@ -115,13 +128,21 @@ namespace Week2Lab1ConsoleApp2020
         {
             using (DbBusinessContext db = new DbBusinessContext())
             {
+                //changes the currency cymbol from £ to "EUR";
+                CultureInfo info = new CultureInfo(System.Threading.Thread.CurrentThread.CurrentCulture.LCID);
+                info.NumberFormat.CurrencySymbol = "EUR ";
+                System.Threading.Thread.CurrentThread.CurrentCulture = info;
+
                 List<Product> Query = db.Products.ToList();
 
                 Console.WriteLine("Query 4 Product List together with their total value");
                 foreach (var item in Query)
                 {
+                    
                     float totalValue = item.QuantityInStock * item.UnitPrice;
-                    Console.WriteLine("{0} {1}", item.ID, item.Description, totalValue);
+                    var sb = new System.Text.StringBuilder();
+                    sb.Append(String.Format("{0}\t\t{1}\t\t{2:C}", item.ID, item.Description, totalValue));
+                    Console.WriteLine(sb);
                 }
                 Console.WriteLine("----------");
                 Console.ReadKey();

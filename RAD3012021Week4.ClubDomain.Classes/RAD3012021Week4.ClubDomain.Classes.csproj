@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F022A3B1-BEB9-4877-B5E5-4AB0B0D1D095}</ProjectGuid>
+    <ProjectGuid>{FD1930DA-964D-421E-BE32-0BF0F78FD67F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RAD3012021Week4.ClubDomain.Classes</RootNamespace>
@@ -52,26 +52,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="ClubsContext.cs" />
-    <Compile Include="Migrations\202010230946090_CLUB CONTEXT SETUP.cs" />
-    <Compile Include="Migrations\202010230946090_CLUB CONTEXT SETUP.designer.cs">
-      <DependentUpon>202010230946090_CLUB CONTEXT SETUP.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Club.cs" />
-    <Compile Include="Models\ClubEvent.cs" />
-    <Compile Include="Models\EventAttendance.cs" />
-    <Compile Include="Models\Members.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202010230946090_CLUB CONTEXT SETUP.resx">
-      <DependentUpon>202010230946090_CLUB CONTEXT SETUP.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
