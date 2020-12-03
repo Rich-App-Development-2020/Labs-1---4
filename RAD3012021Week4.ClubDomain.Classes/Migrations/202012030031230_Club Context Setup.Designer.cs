@@ -13,7 +13,7 @@ namespace RAD3012021Week4.ClubDomain.Classes.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202011061351226_Club Context Setup"; }
+            get { return "202012030031230_Club Context Setup"; }
         }
         
         string IMigrationMetadata.Source

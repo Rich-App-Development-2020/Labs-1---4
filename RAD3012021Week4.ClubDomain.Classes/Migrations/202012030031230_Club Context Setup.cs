@@ -39,12 +39,38 @@
                     {
                         MemberID = c.Int(nullable: false, identity: true),
                         AssociatedClub = c.Int(nullable: false),
-                        StudentID = c.String(),
+                        StudentID = c.String(maxLength: 128),
                         approved = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.MemberID)
                 .ForeignKey("dbo.Club", t => t.AssociatedClub, cascadeDelete: true)
-                .Index(t => t.AssociatedClub);
+                .ForeignKey("dbo.Students", t => t.StudentID)
+                .Index(t => t.AssociatedClub)
+                .Index(t => t.StudentID);
+            
+            CreateTable(
+                "dbo.Students",
+                c => new
+                    {
+                        StudentID = c.String(nullable: false, maxLength: 128),
+                        FirstName = c.String(),
+                        CourseID = c.Int(),
+                        SecondName = c.String(),
+                    })
+                .PrimaryKey(t => t.StudentID)
+                .ForeignKey("dbo.Courses", t => t.CourseID)
+                .Index(t => t.CourseID);
+            
+            CreateTable(
+                "dbo.Courses",
+                c => new
+                    {
+                        CourseID = c.Int(nullable: false, identity: true),
+                        CourseCode = c.String(),
+                        Year = c.Int(nullable: false),
+                        CourseName = c.String(),
+                    })
+                .PrimaryKey(t => t.CourseID);
             
             CreateTable(
                 "dbo.EventAttendances",
@@ -67,12 +93,18 @@
             DropForeignKey("dbo.EventAttendances", "AttendeeMember", "dbo.Member");
             DropForeignKey("dbo.EventAttendances", "EventID", "dbo.ClubEvent");
             DropForeignKey("dbo.ClubEvent", "ClubId", "dbo.Club");
+            DropForeignKey("dbo.Member", "StudentID", "dbo.Students");
+            DropForeignKey("dbo.Students", "CourseID", "dbo.Courses");
             DropForeignKey("dbo.Member", "AssociatedClub", "dbo.Club");
             DropIndex("dbo.EventAttendances", new[] { "AttendeeMember" });
             DropIndex("dbo.EventAttendances", new[] { "EventID" });
+            DropIndex("dbo.Students", new[] { "CourseID" });
+            DropIndex("dbo.Member", new[] { "StudentID" });
             DropIndex("dbo.Member", new[] { "AssociatedClub" });
             DropIndex("dbo.ClubEvent", new[] { "ClubId" });
             DropTable("dbo.EventAttendances");
+            DropTable("dbo.Courses");
+            DropTable("dbo.Students");
             DropTable("dbo.Member");
             DropTable("dbo.Club");
             DropTable("dbo.ClubEvent");

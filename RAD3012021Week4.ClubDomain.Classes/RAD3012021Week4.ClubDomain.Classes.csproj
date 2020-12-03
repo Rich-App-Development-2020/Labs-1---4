@@ -64,13 +64,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClubsContext.cs" />
-    <Compile Include="Migrations\202011061351226_Club Context Setup.cs" />
-    <Compile Include="Migrations\202011061351226_Club Context Setup.designer.cs">
-      <DependentUpon>202011061351226_Club Context Setup.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011061521113_attempt.cs" />
-    <Compile Include="Migrations\202011061521113_attempt.designer.cs">
-      <DependentUpon>202011061521113_attempt.cs</DependentUpon>
+    <Compile Include="Migrations\202012030031230_Club Context Setup.cs" />
+    <Compile Include="Migrations\202012030031230_Club Context Setup.designer.cs">
+      <DependentUpon>202012030031230_Club Context Setup.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Club.cs" />
@@ -89,16 +85,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <EmbeddedResource Include="Migrations\202011061521113_attempt.resx">
-      <DependentUpon>202011061521113_attempt.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202012030031230_Club Context Setup.resx">
+      <DependentUpon>202012030031230_Club Context Setup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentList1.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202011061351226_Club Context Setup.resx">
-      <DependentUpon>202011061351226_Club Context Setup.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
